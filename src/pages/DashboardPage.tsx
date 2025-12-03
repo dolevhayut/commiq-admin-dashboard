@@ -77,7 +77,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4" data-tutorial="stats-cards">
         <StatCard
           label="ממתינים"
           value={stats?.pending || 0}
@@ -129,6 +129,7 @@ export default function DashboardPage() {
         <div 
           className="bg-white rounded-[27px] p-7"
           style={{ border: `1px solid ${colors.neutral[200]}` }}
+          data-tutorial="urgent-tickets"
         >
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
@@ -199,6 +200,7 @@ export default function DashboardPage() {
         <div 
           className="bg-white rounded-[27px] p-7"
           style={{ border: `1px solid ${colors.neutral[200]}` }}
+          data-tutorial="recent-activity"
         >
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">

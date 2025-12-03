@@ -80,6 +80,7 @@ export default function TicketsPage() {
       <div 
         className="bg-white rounded-[27px] p-5"
         style={{ border: `1px solid ${colors.neutral[200]}` }}
+        data-tutorial="status-filters"
       >
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-sm font-medium ml-2" style={{ color: colors.neutral[600] }}>סינון לפי סטטוס:</span>
@@ -116,6 +117,7 @@ export default function TicketsPage() {
       <div 
         className="bg-white rounded-[27px] overflow-hidden"
         style={{ border: `1px solid ${colors.neutral[200]}` }}
+        data-tutorial="tickets-table"
       >
         {isLoading ? (
           <div className="p-12 text-center" style={{ color: colors.neutral[500] }}>
@@ -213,6 +215,7 @@ export default function TicketsPage() {
                       style={{ backgroundColor: colors.brand[600] }}
                       onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.brand[700]}
                       onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.brand[600]}
+                      data-tutorial="view-button"
                     >
                       <Eye className="w-4 h-4" />
                       צפייה
@@ -229,6 +232,7 @@ export default function TicketsPage() {
           <div 
             className="flex items-center justify-between px-5 py-4"
             style={{ borderTop: `1px solid ${colors.neutral[200]}`, backgroundColor: colors.neutral[50] }}
+            data-tutorial="pagination"
           >
             <div className="text-sm" style={{ color: colors.neutral[500] }}>
               עמוד {page} מתוך {data.totalPages}

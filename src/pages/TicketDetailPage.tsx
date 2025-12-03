@@ -333,7 +333,7 @@ export default function TicketDetailPage() {
       </div>
 
       {/* Progress Steps */}
-      <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-6">
+      <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-6" data-tutorial="progress-steps">
         <div className="flex items-center justify-between">
           {STEPS.map((step, index) => {
             const isActive = step.id === currentStep;
@@ -387,7 +387,7 @@ export default function TicketDetailPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
               {/* Credentials */}
-              <div className="space-y-4">
+              <div className="space-y-4" data-tutorial="credentials">
                 <h4 className="font-medium text-gray-700 flex items-center gap-2">
                   <Key className="w-4 h-4" />
                   פרטי התחברות
@@ -408,7 +408,7 @@ export default function TicketDetailPage() {
               </div>
 
               {/* Client Info */}
-              <div className="space-y-4">
+              <div className="space-y-4" data-tutorial="client-info">
                 <h4 className="font-medium text-gray-700 flex items-center gap-2">
                   <User className="w-4 h-4" />
                   פרטי לקוח
@@ -458,6 +458,7 @@ export default function TicketDetailPage() {
                 disabled={assignMutation.isPending}
                 className="px-6 py-3 rounded-xl font-medium flex items-center gap-2 text-white transition-colors"
                 style={{ backgroundColor: '#E55539' }}
+                data-tutorial="start-button"
               >
                 {assignMutation.isPending ? (
                   <Loader2 className="w-5 h-5 animate-spin" />
@@ -480,7 +481,7 @@ export default function TicketDetailPage() {
             </h3>
 
             {/* OTP Status */}
-            <div className={`rounded-xl p-6 mb-6 ${hasOtp ? 'bg-green-50 border border-green-200' : 'bg-orange-50 border border-orange-200'}`}>
+            <div className={`rounded-xl p-6 mb-6 ${hasOtp ? 'bg-green-50 border border-green-200' : 'bg-orange-50 border border-orange-200'}`} data-tutorial="otp-section">
               {hasOtp ? (
                 <div className="text-center">
                   <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
@@ -581,6 +582,7 @@ export default function TicketDetailPage() {
                     ? 'border-green-500 bg-green-50'
                     : 'border-gray-300 hover:border-gray-400'
                 }`}
+                data-tutorial="upload-section"
               >
                 {uploading ? (
                   <div className="flex flex-col items-center gap-3">
@@ -658,6 +660,7 @@ export default function TicketDetailPage() {
                 disabled={!uploadedFile || completeMutation.isPending}
                 className="px-8 py-3 rounded-xl font-medium flex items-center gap-2 text-white transition-colors disabled:opacity-50"
                 style={{ backgroundColor: '#16A34A' }}
+                data-tutorial="complete-button"
               >
                 {completeMutation.isPending ? (
                   <Loader2 className="w-5 h-5 animate-spin" />

@@ -1,12 +1,15 @@
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import { logout, getCurrentWorker } from '../services/api';
 import { useState } from 'react';
+import { useTutorial } from '../contexts/TutorialContext';
+import { PlayCircle } from 'lucide-react';
 
 export default function Layout() {
   const location = useLocation();
   const navigate = useNavigate();
   const worker = getCurrentWorker();
   const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const { startTutorial } = useTutorial();
 
   const handleLogout = () => {
     logout();
@@ -49,6 +52,7 @@ export default function Layout() {
                 key={item.path}
                 to={item.path}
                 className="group relative flex items-center justify-center"
+                data-tutorial={item.path === '/tickets' ? 'nav-tickets' : undefined}
               >
                 <div 
                   className="w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all"
@@ -138,6 +142,15 @@ export default function Layout() {
           </div>
           
           <div className="flex items-center gap-3">
+            <button
+              onClick={startTutorial}
+              className="px-4 py-2 bg-white rounded-xl text-sm font-medium flex items-center gap-2 transition-colors hover:bg-gray-50"
+              style={{ border: '1px solid #D4D4DF', color: '#08083A' }}
+              title="הרץ הדגמה"
+            >
+              <PlayCircle className="w-4 h-4" style={{ color: '#E55539' }} />
+              הדגמה
+            </button>
             <div 
               className="px-4 py-2 bg-white rounded-xl text-sm"
               style={{ border: '1px solid #D4D4DF', color: '#5C5C6B' }}
