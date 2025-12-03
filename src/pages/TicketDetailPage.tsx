@@ -43,6 +43,7 @@ import {
   Shield,
 } from 'lucide-react';
 import { uploadFile } from '../lib/supabase';
+import { getProviderReports } from '../data/providerReports';
 
 // Wizard Steps
 type WizardStep = 'details' | 'otp' | 'upload' | 'complete';
@@ -385,6 +386,7 @@ export default function TicketDetailPage() {
               פרטי הבקשה
             </h3>
 
+
             <div className="grid md:grid-cols-2 gap-6">
               {/* Credentials */}
               <div className="space-y-4" data-tutorial="credentials">
@@ -570,6 +572,42 @@ export default function TicketDetailPage() {
               <Upload className="w-6 h-6 text-gray-500" />
               העלאת קובץ הדוח
             </h3>
+
+            {/* Provider Reports Info */}
+            {(() => {
+              const providerInfo = getProviderReports(ticket.provider);
+              if (providerInfo && providerInfo.reports.length > 0) {
+                return (
+                  <div 
+                    className="mb-6 p-4 rounded-xl" 
+                    style={{ backgroundColor: '#FFF4F2', border: '1px solid #FFDDD5' }}
+                    data-tutorial="reports-info"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E55539' }}>
+                        <FileText className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold mb-2" style={{ color: '#A32814' }}>
+                          דוחות שצריך להעלות מ-{providerInfo.displayName}:
+                        </h4>
+                        <ul className="list-disc list-inside space-y-1 text-sm" style={{ color: '#5C5C6B' }}>
+                          {providerInfo.reports.map((report, idx) => (
+                            <li key={idx}>{report}</li>
+                          ))}
+                        </ul>
+                        {providerInfo.notes && (
+                          <p className="mt-2 text-xs italic" style={{ color: '#8A8A99' }}>
+                            💡 {providerInfo.notes}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+              return null;
+            })()}
 
             {/* Upload Area */}
             {!uploadedFile ? (

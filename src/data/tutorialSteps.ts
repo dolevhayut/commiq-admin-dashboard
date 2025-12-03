@@ -125,9 +125,16 @@ export const ticketDetailSteps: TutorialStep[] = [
     position: 'bottom',
   },
   {
+    id: 'ticket-detail-reports-info',
+    title: 'מידע על הדוחות',
+    description: 'כאן תוכלו לראות איזה דוחות צריך להעלות מהפורטל הספציפי. כל פורטל דורש דוחות שונים - חלקם דורשים דוח אחד וחלקם מספר דוחות. ודאו שהעליתם את כל הדוחות הנדרשים.',
+    target: '[data-tutorial="reports-info"]',
+    position: 'bottom',
+  },
+  {
     id: 'ticket-detail-upload',
     title: 'העלאת קובץ',
-    description: 'לאחר קבלת ה-OTP, תוכלו להעלות את קובץ הדוח. גררו קובץ או לחצו על "בחר קובץ מהמחשב".',
+    description: 'לאחר קבלת ה-OTP, תוכלו להעלות את קובץ הדוח. גררו קובץ או לחצו על "בחר קובץ מהמחשב". אם יש מספר דוחות, תוכלו להעלות אותם אחד אחרי השני או כקובץ אחד מאוחד.',
     target: '[data-tutorial="upload-section"]',
     position: 'top',
   },
