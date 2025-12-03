@@ -7,6 +7,7 @@ import { formatDistanceToNow, format } from 'date-fns';
 import { he } from 'date-fns/locale';
 import { useRealtimeTickets } from '../hooks/useRealtimeTickets';
 import { RefreshCw, Inbox, Eye, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import ProviderLogo from '../components/ProviderLogo';
 
 // Design System Colors
 const colors = {
@@ -174,8 +175,11 @@ export default function TicketsPage() {
                   onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                 >
                   <td className="px-5 py-4">
-                    <div className="font-medium" style={{ color: colors.brand[600] }}>
-                      {ticket.provider_display_name || ticket.provider}
+                    <div className="flex items-center gap-3">
+                      <ProviderLogo provider={ticket.provider} size="sm" />
+                      <div className="font-medium" style={{ color: colors.brand[600] }}>
+                        {ticket.provider_display_name || ticket.provider}
+                      </div>
                     </div>
                   </td>
                   <td className="px-5 py-4">

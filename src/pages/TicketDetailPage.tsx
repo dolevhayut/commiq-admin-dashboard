@@ -44,6 +44,7 @@ import {
 } from 'lucide-react';
 import { uploadFile } from '../lib/supabase';
 import { getProviderReports } from '../data/providerReports';
+import ProviderLogo from '../components/ProviderLogo';
 
 // Wizard Steps
 type WizardStep = 'details' | 'otp' | 'upload' | 'complete';
@@ -319,6 +320,7 @@ export default function TicketDetailPage() {
             <ArrowRight className="w-4 h-4" />
             חזרה
           </Link>
+          <ProviderLogo provider={ticket.provider} size="md" />
           <div>
             <h2 className="text-2xl font-bold text-gray-900">
               {ticket.provider_display_name || ticket.provider}

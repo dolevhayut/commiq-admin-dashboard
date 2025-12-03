@@ -16,6 +16,7 @@ import {
   ClipboardList,
   CheckCircle,
 } from 'lucide-react';
+import ProviderLogo from '../components/ProviderLogo';
 
 // Design System Colors
 const colors = {
@@ -174,12 +175,15 @@ export default function DashboardPage() {
                   onMouseEnter={(e) => e.currentTarget.style.backgroundColor = colors.neutral[100]}
                   onMouseLeave={(e) => e.currentTarget.style.backgroundColor = colors.neutral[50]}
                 >
-                  <div>
-                    <div className="font-medium" style={{ color: colors.brand[600] }}>
-                      {ticket.provider_display_name || ticket.provider}
-                    </div>
-                    <div className="text-sm" style={{ color: colors.neutral[500] }}>
-                      {ticket.user_name} | {ticket.report_month}/{ticket.report_year}
+                  <div className="flex items-center gap-3 flex-1">
+                    <ProviderLogo provider={ticket.provider} size="sm" />
+                    <div>
+                      <div className="font-medium" style={{ color: colors.brand[600] }}>
+                        {ticket.provider_display_name || ticket.provider}
+                      </div>
+                      <div className="text-sm" style={{ color: colors.neutral[500] }}>
+                        {ticket.user_name} | {ticket.report_month}/{ticket.report_year}
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -236,6 +240,7 @@ export default function DashboardPage() {
               >
                 <div className="flex items-center gap-3">
                   <StatusDot status={ticket.status} />
+                  <ProviderLogo provider={ticket.provider} size="sm" />
                   <div>
                     <div className="font-medium" style={{ color: colors.brand[600] }}>
                       {ticket.provider_display_name || ticket.provider}
