@@ -31,10 +31,15 @@ yifat-integration-package/
 │       └─ דיאגרמות ותרשימי זרימה
 │
 ├── 📁 sql/ - סקריפטים מוכנים להרצה
-│   └── setup_download_wizard_for_yifat.sql ⭐⭐⭐
-│       └─ יוצר את כל הטבלאות והפוליסים
-│       └─ הרץ ב: https://supabase.com/dashboard/project/zwqfkmgflzywtmyoosow/sql
-│       └─ זמן ריצה: ~30 שניות
+│   ├── setup_download_wizard_for_yifat.sql ⭐⭐⭐
+│   │   └─ יוצר את כל הטבלאות והפוליסים
+│   │   └─ הרץ ב: https://supabase.com/dashboard/project/zwqfkmgflzywtmyoosow/sql
+│   │   └─ זמן ריצה: ~30 שניות
+│   │
+│   └── add_webhook_notification.sql ⭐
+│       └─ מוסיף webhook ל-Make.com
+│       └─ שולח התראות על בקשות חדשות, OTP, ועדכוני סטטוס
+│       └─ הרץ לאחר setup_download_wizard_for_yifat.sql
 │
 ├── 📁 examples/ - דוגמאות מוכנות
 │   └── Downloads.example.jsx ⭐
