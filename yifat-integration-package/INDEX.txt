@@ -1,0 +1,94 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║     📥 DOWNLOAD WIZARD - חבילת אינטגרציה ליפעת               ║
+║                                                                ║
+║     מערכת Wizard מלאה להורדת דוחות מפורטלים                  ║
+║     מוכנה לשילוב במערכת commiq-ifat                           ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+📦 תוכן החבילה
+══════════════════
+
+📄 START_HERE.md                    ⭐⭐⭐ התחילי כאן!
+📄 README.md                        מידע כללי
+📄 FILE_INDEX.md                    מפתח קבצים מפורט
+
+📁 docs/                            מסמכי הדרכה (4 קבצים)
+📁 sql/                             סקריפטים להרצה ב-Supabase
+📁 examples/                        דוגמאות מוכנות
+📁 components/                      קומפוננטות React
+📁 pages/                           דפים מלאים (כולל הWizard)
+📁 data/                            נתוני פורטלים ודוחות
+📁 hooks/                           React Hooks
+📁 contexts/                        React Contexts
+📁 services/                        API client
+📁 types/                           TypeScript definitions
+📁 lib/                             Utilities
+
+
+⚡ התחלה מהירה (10 דקות)
+═══════════════════════════════════
+
+1. קראי את: START_HERE.md
+2. הריצי את: sql/setup_download_wizard_for_yifat.sql
+3. העתיקי את: examples/Downloads.example.jsx
+4. ✅ עובד!
+
+
+🏗️ שילוב מלא (יום עבודה)
+═══════════════════════════════
+
+1. קראי את: docs/YIFAT_INTEGRATION_QUICK_START.md
+2. העתיקי את כל הקבצים מהתיקיות
+3. התאימי imports ונתיבים
+4. ✅ מושלם!
+
+
+🎯 פרטים חשובים
+════════════════
+
+המערכת שלך:
+  URL: https://commiq-ifat.vercel.app
+  Supabase: zwqfkmgflzywtmyoosow
+
+Demo של הWizard:
+  URL: https://admin-dashboard-olive.vercel.app
+  Supabase: qrcfnsmotffomtjusimg
+
+
+📊 סטטיסטיקה
+════════════
+
+✅ 22 קבצים
+✅ 5 מסמכי הדרכה
+✅ 17 קבצי קוד
+✅ 1 סקריפט SQL
+✅ 10 פורטלים נתמכים
+✅ 4 שלבים ב-Wizard
+✅ 100% מוכן לשימוש
+
+
+🎁 מה מקבלים?
+═══════════════
+
+✨ Wizard מודרך להורדת דוחות
+✨ Realtime OTP tracking
+✨ Tutorial למשתמשים חדשים
+✨ לוגואים של פורטלים
+✨ רמזים על דוחות נדרשים
+✨ Dashboard עם stats
+✨ מעקב וניהול בקשות
+
+
+📞 עזרה
+════════
+
+כל המידע במסמכים!
+התחילי מ-START_HERE.md
+
+
+════════════════════════════════════════════════════════════════
+בהצלחה עם השילוב! 🚀✨
+════════════════════════════════════════════════════════════════
+
